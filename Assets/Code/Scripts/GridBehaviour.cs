@@ -3,7 +3,7 @@
 public class GridBehaviour : MonoBehaviour
 {
 	public GameObject cell;
-	public GameObject tower;
+	public GameObject[] towers;
 	private Grid grid;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,8 +14,17 @@ public class GridBehaviour : MonoBehaviour
 	// Update is called every frame, if the MonoBehaviour is enabled.
 	private void Update()
 	{
-		if(Input.GetMouseButtonDown(0)){
-			grid.SetTower(GetWorldPosition(),tower);
+		if(Input.GetMouseButtonDown(0) && GameGlobals.towerType == 1 && GameGlobals.canPlace == true){
+			grid.SetTower(GetWorldPosition(),towers[0]);
+			GameGlobals.canPlace = false;
+		}
+		if(Input.GetMouseButtonDown(0) && GameGlobals.towerType == 2 && GameGlobals.canPlace == true){
+			grid.SetTower(GetWorldPosition(),towers[1]);
+			GameGlobals.canPlace = false;
+		}
+		if(Input.GetMouseButtonDown(0) && GameGlobals.towerType == 3 && GameGlobals.canPlace == true){
+			grid.SetTower(GetWorldPosition(),towers[2]);
+			GameGlobals.canPlace = false;
 		}
 	}
 	

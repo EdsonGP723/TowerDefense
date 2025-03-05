@@ -34,6 +34,11 @@ public class Enemy : MonoBehaviour
 				canMove = false;
 			}
 		}
+		
+		if (life <= 0)
+		{
+			this.gameObject.SetActive(false);
+		}
     }
     
 	private void Move(){
@@ -58,6 +63,15 @@ public class Enemy : MonoBehaviour
 				}
 			}
 			yield return new WaitForSeconds(atackSpeed);
+		}
+	}
+	
+	// Sent when another object enters a trigger collider attached to this object (2D physics only).
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.CompareTag("Bullet"))
+		{
+			life -=2;
 		}
 	}
 }

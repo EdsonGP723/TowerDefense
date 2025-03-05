@@ -19,6 +19,10 @@ public class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
 	{
+		if (Life <= 0)
+		{
+			this.gameObject.SetActive(false);
+		}
     }
     
 	private IEnumerator RaycastEnemy(){
@@ -54,7 +58,7 @@ public class Tower : MonoBehaviour
 	{
 		if (other.CompareTag("EnemyAtack"))
 		{
-			
+			Life -= 2;
 		}
 	}
 	

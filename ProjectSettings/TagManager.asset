@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - EnemyAtack
   - Tower
+  - Bullet
   layers:
   - Default
   - TransparentFX

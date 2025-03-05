@@ -3,22 +3,17 @@
 public class Bullet : MonoBehaviour
 {
 	private float speed = .1f;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
+   
     // Update is called once per frame
     void Update()
     {
 	    transform.Translate(Vector2.down * speed);
     }
     
-	// Sent when an incoming collider makes contact with this object's collider (2D physics only).
-	private void OnCollisionEnter2D(Collision2D collision)
+	// Sent when another object enters a trigger collider attached to this object (2D physics only).
+	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (collision.gameObject.CompareTag("Enemy"))
+		if (other.gameObject.CompareTag("Enemy"))
 		{
 			gameObject.SetActive(false);
 		}
