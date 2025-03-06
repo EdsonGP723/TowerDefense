@@ -3,6 +3,6 @@
 public class GameGlobals
 {
 	public static int towerType;
-	public static int coins = 50;
+	public static int coins = 80;
 	public static bool canPlace;
 }

@@ -13,7 +13,7 @@ public class EconomySystem : MonoBehaviour
 	private IEnumerator GetCoins(){
 		while (true)
 		{
-			GameGlobals.coins ++;
+			GameGlobals.coins += 10;
 			yield return new WaitForSeconds(5f);
 		}
 	}

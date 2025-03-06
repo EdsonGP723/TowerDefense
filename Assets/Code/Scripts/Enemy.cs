@@ -30,13 +30,18 @@ public class Enemy : MonoBehaviour
 		{
 			if (hit.collider.CompareTag("Tower"))
 			{
-				Debug.Log("Encontré torre");
 				canMove = false;
+			}
+			else
+			{
+				canMove = true;
 			}
 		}
 		
 		if (life <= 0)
 		{
+			WaveSystem.EnemiesAlive -= 1;
+			GameGlobals.coins += 2;
 			this.gameObject.SetActive(false);
 		}
     }
@@ -56,7 +61,6 @@ public class Enemy : MonoBehaviour
 			{
 				if (atackRaycast.collider.CompareTag("Tower"))
 				{
-					Debug.Log("Ataco torre");
 					atack.SetActive(true);
 					yield return new WaitForSeconds(atackSpeed);
 					atack.SetActive(false);
@@ -71,7 +75,7 @@ public class Enemy : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag("Bullet"))
 		{
-			life -=2;
+			life -=4;
 		}
 	}
 }

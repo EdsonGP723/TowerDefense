@@ -200,6 +200,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireRate: 1
   Range: 3
-  Life: 3
+  Life: 5
   ShootPoint: {fileID: 76209958955184927}
   canShoot: 0

@@ -198,8 +198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6f9793e048cd654a99e8843d4c7acae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireRate: 8
+  FireRate: 6
   Range: 5
-  Life: 8
+  Life: 10
   ShootPoint: {fileID: 76209958955184927}
   canShoot: 0
