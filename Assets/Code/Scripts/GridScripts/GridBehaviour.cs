@@ -5,15 +5,19 @@ public class GridBehaviour : MonoBehaviour
 	public GameObject cell;
 	public GameObject[] towers;
 	private Grid grid;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
-    {
+	{
+		// Inicializa una nueva cuadrícula con dimensiones 4x3, celdas de 2 unidades,
+		// usando el prefab "cell" y posicionada en (-4,-2)
 	    grid = new Grid(4,3,2f,cell,new Vector3(-4,-2));
     }
 
-	// Update is called every frame, if the MonoBehaviour is enabled.
 	private void Update()
 	{
+		// Maneja la colocación de torres según el tipo seleccionado cuando se hace clic
+		// y si está permitido colocar una torre actualmente
+		
 		if(Input.GetMouseButtonDown(0) && GameGlobals.towerType == 1 && GameGlobals.canPlace == true){
 			grid.SetTower(GetWorldPosition(),towers[0]);
 			GameGlobals.canPlace = false;

@@ -1828,51 +1828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1249576280
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1249576281}
-  - component: {fileID: 1249576282}
-  m_Layer: 0
-  m_Name: BulletsPool
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1249576281
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249576280}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.09960526, y: 1.6080483, z: 0.009900038}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1249576282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1249576280}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44b5fa183dc2ec942bb948ebe718d2c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 4511871694923924690, guid: 8b7318585f0a6aa4b92c2921fcc30dae, type: 3}
 --- !u!1 &1326126352
 GameObject:
   m_ObjectHideFlags: 0
@@ -1919,6 +1874,7 @@ GameObject:
   - component: {fileID: 1337101008}
   - component: {fileID: 1337101009}
   - component: {fileID: 1337101010}
+  - component: {fileID: 1337101011}
   m_Layer: 0
   m_Name: Systems
   m_TagString: Untagged
@@ -1978,6 +1934,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5831fc4a70fe3d4b9c232a89a94d7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1337101011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337101007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b5fa183dc2ec942bb948ebe718d2c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 4511871694923924690, guid: 8b7318585f0a6aa4b92c2921fcc30dae, type: 3}
 --- !u!1 &1449041192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2692,7 +2661,7 @@ MonoBehaviour:
     IsHidden: 0
   - Type: 0
     Name: 
-    GameObject: {fileID: 1249576280}
+    GameObject: {fileID: 0}
     Ordinal: 3
     Priority: 0
     IconType: 109000
@@ -2907,7 +2876,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 1249576281}
   - {fileID: 1337101008}
   - {fileID: 1247648752}
   - {fileID: 1611105162}

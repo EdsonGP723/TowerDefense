@@ -10,7 +10,7 @@ public class WaveSystem : MonoBehaviour
 	public static int EnemiesAlive;
 	public int enemyCount;
 	public int waveCount = 0;
-	public float spawnDelay = 0.5f; // Tiempo entre cada spawn de enemigo
+	public float spawnDelay = 0.5f; 
 	private int maxWave = 4;
 	private float timer = 10f;
 	private bool canSpawn = true;
@@ -78,7 +78,7 @@ public class WaveSystem : MonoBehaviour
 			int spawnpoint = Random.Range(0, SpawnPoints.Length);
             
 			GameObject enemy = Instantiate(Enemies[spawnobj], SpawnPoints[spawnpoint].position, SpawnPoints[spawnpoint].rotation);
-			// Opcional: puedes asignar un script a cada enemigo para que reduzca EnemiesAlive cuando muera
+			
             
 			yield return new WaitForSeconds(spawnDelay);
 		}
